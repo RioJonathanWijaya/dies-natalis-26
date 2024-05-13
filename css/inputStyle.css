@@ -16,8 +16,9 @@ body {
     position: absolute;
     /* background: linear-gradient(#FF6833, #FF8C52, #FFAE71, #FFCF91, #FFE5B2); */
     animation: colors 10s linear forwards;
-
+    transition: all .3s ease-in-out;
 }
+
 
 @keyframes colors {
     0%{
@@ -299,8 +300,9 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 label {
-    color: black;
-    display: block;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     margin-bottom: 5px;
     font-size: 2rem;
 }
