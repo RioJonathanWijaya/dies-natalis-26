@@ -4,8 +4,10 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 1vw;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../background2.jpg);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../background2.jpg); */
+background: url(../bg\ web.png);
+    
   background-size: cover;
   height: 100vh;
   overflow-y: hidden;
