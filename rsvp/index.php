@@ -44,19 +44,19 @@
             </div>
             <br>
             <div id="box2" style="display: none;">
-                <div class="inputGroup nrp">
-                    <input type="text" id="nrp" required="">
+                <div class="inputGroup nrp" style="display: none;">
+                    <input type="text" id="nrp" name="nrp" >
                     <label for="nrp">NRP</label>
                 </div>
-                <div class="inputGroup email">
-                    <input type="email" id="email" required="">
+                <div class="inputGroup email" style="display: none;">
+                    <input type="email" id="email" name="email">
                     <label for="email">Email</label>
                 </div>
-                <div class="inputGroup nama">
-                    <input type="text" id="nama" required="">
+                <div class="inputGroup nama" style="display: none;">
+                    <input type="text" id="nama" name="nama">
                     <label for="nama">Nama</label>
                 </div>
-                <button id="submit" class="btn-12" type="submit"><span>Submit</span></button>
+                <button id="submit" class="btn-12" type="submit" style="display: none;"><span>Submit</span></button>
             </div>
         </form>
     </div>
@@ -94,6 +94,25 @@
                 var nrp = $("#nrp").val();
                 var nama = $("#nama").val();
                 var email = $("#email").val();
+                if (role === 'mahasiswa') {
+                    if (nrp === '' || nama === '') {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'NRP dan Nama tidak boleh kosong.',
+                            icon: 'error',
+                        });
+                        return;
+                    }
+                }else {
+                    if (email === '' || nama === '') {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'Email dan Nama tidak boleh kosong.',
+                            icon: 'error',
+                        });
+                        return;
+                    }
+                }
                 $.ajax({
                     method: "POST",
                     url: "rsvp.php",
@@ -126,7 +145,7 @@
                         } else {
                             Swal.fire({
                                 title: 'Error!',
-                                text: 'Silahkan coba lagi',
+                                text: 'Silakan coba lagi',
                                 icon: 'error',
                             })
                         }
@@ -134,7 +153,7 @@
                     error: function(error) {
                         Swal.fire({
                             title: 'Error!',
-                            text: 'Silahkan coba lagi',
+                            text: 'Silakan coba lagi',
                             icon: 'error',
                         })
                     }
