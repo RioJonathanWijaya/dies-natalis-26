@@ -235,6 +235,9 @@ input:-webkit-autofill:active {
     font-size: 4vw;
 
   }
+  #box1 {
+    margin: 2.5vh auto 0.5vh auto;
+    }
   .header {
     font-size: 10vw;
   } 

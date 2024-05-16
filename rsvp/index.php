@@ -28,7 +28,7 @@
 
 <body>
     <div id="form">
-        <h1 class="header text-center">Dies Natalis Informatika 26</h1>
+        <h1 class="header text-center mt-3">Dies Natalis Informatika 26</h1>
         <form id="form_rsvp" method="POST">
             <div id="box1">
                 <h2 class="header2">Hello, I'm a ...</h2>
